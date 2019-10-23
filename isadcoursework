@@ -1,0 +1,79 @@
+CREATE table Users
+(UserID INT NOT NULL  UNIQUE AUTO_INCREMENT,
+ UserFirstName VARCHAR(30) NOT NULL,
+ UserLastName VARCHAR(30) NOT NULL,
+ UserUserName vARCHAR(30) NOT NULL,
+ UserEmail vARCHAR(30) NOT NULL,
+ UserPassword varchar(30) NOT Null,
+ PRIMARY KEY(UserID));
+ 
+ 
+ CREATE Table Orders
+(OrderID INT NOT NULL  UNIQUE AUTO_INCREMENT,
+ TableNo INT NOT NULL,
+ OrderTimeDate  datetime  NOT NULL,
+ userID        INT        NOT  NULL ,
+ PRIMARY KEY (OrderID),
+ FOREIGN KEY (userID) REFERENCES users(UserID));
+ 
+ CREATE Table Orders
+(OrderID INT NOT NULL  UNIQUE AUTO_INCREMENT,
+ TableNo INT NOT NULL,
+ OrderTimeDate  datetime  NOT NULL,
+ userID        INT        NOT  NULL ,
+ PRIMARY KEY (OrderID),
+ FOREIGN KEY (userID) REFERENCES users(UserID));
+ 
+ 
+ CREATE TABLE OrderDetials 
+ (Quantity int not null ,
+ OrderID int NOT null, 
+ ItemID INT NOT NULL,
+ FOREIGN KEY (OrderID) REFERENCES orders(OrderID),
+ FOREIGN KEY (ItemID) REFERENCES items(ItemID) 
+ 
+ Insert into Users(UserFirstName ,UserLastName ,UserUserName ,UserEmail, UserPassword )
+ values('tom','hance',thance','tomhance@yahoo.com','123er');
+  Insert into Users(UserFirstName ,UserLastName ,UserUserName ,UserEmail, UserPassword )
+ values('zee','roj','zoj','zeeroj@gmail.com','456ty');
+  Insert into Users(UserFirstName ,UserLastName ,UserUserName ,UserEmail, UserPassword )
+ values('Dee' , 'McGrath','DeeGath','deeMcgrath@gmail.com','1234oki');
+  
+  insert into  Orders (OrderID,TableNo,OrderTimeDate ,userID ) 
+  values(40,2,'2012-6-23-12-00-00',3);
+  insert into  Orders (OrderID,TableNo,OrderTimeDate ,userID ) 
+  values(44,3,'2016-11-21-06-30-00',2);
+  insert into  Orders (OrderID,TableNo,OrderTimeDate ,userID ) 
+  values(55,4,'2010-06-10-04-15-00',3);
+  
+  
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0012,5.50,'Bread basket','food');
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0013,7.00,'Hony almond Granola with fruits','food');
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0014,7.50,'Belgian waffle','food');
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0015,7.50,'scrambled egg','food');
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0016,8,50,'Blue bery pancake','food');
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0017,2.50,'Cofee,'Drink');
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0018,4.50,'Chocolate','Drink');
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0019,5.00,'Carretto','Drink');
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0020,3.00,'iced tea','Drink');
+  insert into items(ItemID,ProductCost,ProductName,Type)
+  values(0021,2.50,'Soda','Drink');
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
