@@ -16,21 +16,19 @@ CREATE table Users
  PRIMARY KEY (OrderID),
  FOREIGN KEY (userID) REFERENCES users(UserID));
  
- CREATE Table Orders
-(OrderID INT NOT NULL  UNIQUE AUTO_INCREMENT,
- TableNo INT NOT NULL,
- OrderTimeDate  datetime  NOT NULL,
- userID        INT        NOT  NULL ,
- PRIMARY KEY (OrderID),
- FOREIGN KEY (userID) REFERENCES users(UserID));
+creat table items
+(ItemID int unique not null,
+ProductCost varchar(30) not null,
+ProductName varchar(30) not null ,
+Type   varchar(30) not null,
+primary key (ItemID));
  
  
  CREATE TABLE OrderDetials 
  (Quantity int not null ,
  OrderID int NOT null, 
  ItemID INT NOT NULL,
- FOREIGN KEY (OrderID) REFERENCES orders(OrderID),
- FOREIGN KEY (ItemID) REFERENCES items(ItemID) 
+ constraint pk_OrderDetials primary key(OrderID,ItemID)
  
  Insert into Users(UserFirstName ,UserLastName ,UserUserName ,UserEmail, UserPassword )
  values('tom','hance',thance','tomhance@yahoo.com','123er');
@@ -48,28 +46,98 @@ CREATE table Users
   
   
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0012,5.50,'Bread basket','food');
+  values(19,5.50,'Bread basket','food');
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0013,7.00,'Hony almond Granola with fruits','food');
+  values(20,7.00,'Hony almond Granola with fruits','food');
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0014,7.50,'Belgian waffle','food');
+  values(22,7.50,'Belgian waffle','food');
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0015,7.50,'scrambled egg','food');
+  values(23,7.50,'scrambled egg','food');
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0016,8,50,'Blue bery pancake','food');
+  values(24,8.50,'Blue bery pancake','food');
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0017,2.50,'Cofee,'Drink');
+  values(25,2.50,'Cofee',Drink');
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0018,4.50,'Chocolate','Drink');
+  values(26,4.50,'Chocolate','Drink');
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0019,5.00,'Carretto','Drink');
+  values(27,5.00,'Carretto','Drink');
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0020,3.00,'iced tea','Drink');
+  values(28,3.00,'iced tea','Drink');
   insert into items(ItemID,ProductCost,ProductName,Type)
-  values(0021,2.50,'Soda','Drink');
+  values(29,2.50,'Soda','Drink');
   
   
   
+ insert into orderdetials(Quantity,OrderID,ItemID)
+ values(1,40,19);
+  insert into orderdetials(Quantity,OrderID,ItemID)
+ values(3,44,20);
+  insert into orderdetials(Quantity,OrderID,ItemID)
+ values(4,55,22);
+ -------------------------procedure-------------------------------
+ DELIMITER $$
+Create Procedure Sp_insertCustomer
+(UserID INT ,
+ UserFirstName VARCHAR(30) ,
+ UserLastName VARCHAR(30) ,
+ UserUserName vARCHAR(30) ,
+ UserEmail vARCHAR(30) ,
+ UserPassword varchar(30) 
+)
+BEGIN
+INSERT INTO Customer (UserID ,UserFirstName ,UserLastName,UserUserName ,UserEmail, UserPassword ) 
+VALUES (UserID ,UserFirstName ,UserLastName,UserUserName ,UserEmail, UserPassword);
+END$$
+
+
+ DELIMITER $$
+Create Procedure Sp_insertItem
+(ItemID int ,
+ProductCost varchar(30),
+ProductName varchar(30) ,
+Type   varchar(30)
+)
+BEGIN
+INSERT INTO Customer (ItemID,ProductCost,ProductName,Type)
+VALUES(ItemID,ProductCost,ProductName,Type);
+END$$
+
+
+
+ CREATE PROCEDURE `spr_updateitem`(IN ItemID int, IN ProductCost varchar(30),
+ IN ProductName varchar(30) ,IN Type varchar(30) ) 
+ BEGIN 
+ update items
+ set ItemID =ItemID ,
+ ProductCost= ProductCost,
+ ProductName = ProductName, 
+ Type = Type
+ WHERE ItemID =ItemID;
+ END
+ 
+ DELIMITER $$
+ CREATE PROCEDURE `spr_updateCustomer`
+ (
+ UserFirstName VARCHAR(30) ,
+ UserLastName VARCHAR(30) ,
+ UserUserName vARCHAR(30) ,
+ UserEmail vARCHAR(30) ,
+ UserPassword varchar(30) 
+)
+ 
+ BEGIN 
+ (
+ update users
+ set UserFirstName = UserFirstName ,
+ UserLastName = UserLastName ,
+ UserUserName = UserUserName  ,
+ UserEmail = UserEmail,
+ UserPassword = UserPassword
+)
+ 
+ WHERE UserID = UserID;
+ END $$
+	  
  
  
  
