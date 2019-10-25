@@ -16,11 +16,12 @@ CREATE table Users
  PRIMARY KEY (OrderID),
  FOREIGN KEY (userID) REFERENCES users(UserID));
  
-creat table items
+creat table if not exists items
 (ItemID int unique not null,
-ProductCost varchar(30) not null,
-ProductName varchar(30) not null ,
+ProductCost decimal(7,2) not null,
+ProductName varchar(300) not null ,
 Type   varchar(30) not null,
+desicription varchar(300)
 primary key (ItemID));
  
  
@@ -45,26 +46,26 @@ primary key (ItemID));
   values(55,4,'2010-06-10-04-15-00',3);
   
   
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(19,5.50,'Bread basket','food');
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(20,7.00,'Hony almond Granola with fruits','food');
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(22,7.50,'Belgian waffle','food');
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(23,7.50,'scrambled egg','food');
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(24,8.50,'Blue bery pancake','food');
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(25,2.50,'Cofee',Drink');
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(26,4.50,'Chocolate','Drink');
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(27,5.00,'Carretto','Drink');
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(28,3.00,'iced tea','Drink');
-  insert into items(ItemID,ProductCost,ProductName,Type)
-  values(29,2.50,'Soda','Drink');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(19,5.50,'Bread basket','food','Assortment of fresh baked fruit breads and muffins 5.50');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(20,7.00,'Hony almond Granola with fruits','food','Natural cereal of honey toasted oats, raisins, almonds and dates 7.00');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(22,7.50,'Belgian waffle','food','Vanilla flavored batter with malted flour 7.50');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(23,7.50,'scrambled egg','food','Scrambled eggs, 'roasted red pepper and garlic, with green onions 7.50');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(24,8.50,'Blue bery pancake','food','With syrup, butter and lots of berries 8.50');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(25,2.50,'Cofee',Drink','Regular coffee 2.50');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(26,4.50,'Chocolate','Drink','Chocolate espresso with milk 4.50');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(27,5.00,'Carretto','Drink','Whiskey and coffee 5.00');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(28,3.00,'iced tea','Drink','Hot tea, except not hot 3.00');
+  insert into items(ItemID,ProductCost,ProductName,Type,desicription)
+  values(29,2.50,'Soda','Drink','Coke, Sprite, Fanta, etc. 2.50');
   
   
   
@@ -102,46 +103,42 @@ INSERT INTO Customer (ItemID,ProductCost,ProductName,Type)
 VALUES(ItemID,ProductCost,ProductName,Type);
 END$$
 
-
-
- CREATE PROCEDURE `spr_updateitem`(IN ItemID int, IN ProductCost varchar(30),
- IN ProductName varchar(30) ,IN Type varchar(30) ) 
- BEGIN 
+DELIMITER $$
+CREATE PROCEDURE spr_updateitem (IN ItemID int, IN ProductCost decimal(7,2),
+ IN ProductName varchar(300) ,IN Type varchar(30) ,IN desicription varchar(300)
+ ) BEGIN
  update items
- set ItemID =ItemID ,
+ set ItemID =ItemID , 
  ProductCost= ProductCost,
  ProductName = ProductName, 
- Type = Type
+ Type = Type,
+ desicription=desicription 
  WHERE ItemID =ItemID;
  END
+
  
- DELIMITER $$
- CREATE PROCEDURE `spr_updateCustomer`
- (
- UserFirstName VARCHAR(30) ,
- UserLastName VARCHAR(30) ,
- UserUserName vARCHAR(30) ,
- UserEmail vARCHAR(30) ,
- UserPassword varchar(30) 
-)
- 
+CREATE PROCEDURE isad251_salrubaye.spr_updateCustomer ( UserFirstName VARCHAR(30) , UserLastName VARCHAR(30) , UserUserName vARCHAR(30) , 
+UserEmail vARCHAR(30) , UserPassword varchar(30) )
  BEGIN 
- (
- update users
- set UserFirstName = UserFirstName ,
+ update users 
+ set UserID=UserID,
+ UserFirstName = UserFirstName ,
  UserLastName = UserLastName ,
- UserUserName = UserUserName  ,
+ UserUserName = UserUserName ,
  UserEmail = UserEmail,
  UserPassword = UserPassword
-)
- 
  WHERE UserID = UserID;
- END $$
+ END
+ 
+ CREATE PROCEDURE isad251_salrubaye.CheckPassword (IN UserFirstName varchar(30), IN UserPassword varchar(30))
+ BEGIN 
+ select UserUserName ,UserPassword 
+ FROM users 
+ WHERE UserUserName =UserUserName AND UserPassword = UserPassword;
+ END
+ 
+ 
 	  
- 
- 
- 
- 
  
  
  
