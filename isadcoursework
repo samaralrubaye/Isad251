@@ -129,6 +129,7 @@ UserEmail vARCHAR(30) , UserPassword varchar(30) )
  UserPassword = UserPassword
  WHERE UserID = UserID;
  END
+
  
  CREATE PROCEDURE isad251_salrubaye.CheckPassword (IN UserFirstName varchar(30), IN UserPassword varchar(30))
  BEGIN 
@@ -136,9 +137,66 @@ UserEmail vARCHAR(30) , UserPassword varchar(30) )
  FROM users 
  WHERE UserUserName =UserUserName AND UserPassword = UserPassword;
  END
+
+CREATE PROCEDURE isad251_salrubaye.spsales (IN Quantity int ,IN ProductCost decimal(7,2),IN orderID int )
+ BEGIN 
+SELECT SUM(orderdetails.Quantity*items.ProductCost)
+ AS TotalCost,orders.OrderID
+ FROM orderdetails, items,orders
+ WHERE orders.OrderID=orderdetails.OrderID 
+AND orderdetails.ItemID=items.ItemID 
+GROUP BY orders.OrderID ;
+ END
+ -------------------------views----------------------------------------------------------
  
- 
-	  
+CREATE VIEW isad251_salrubaye.salesaudit AS 
+SELECT year(OrderTimeDate) AS inyear,
+ month(OrderTimeDate) AS inmonth,
+ day(OrderTimeDate) AS inday,
+ ProductName, (Quantity * items.ProductCost) AS sales 
+FROM orders
+ JOIN orderdetails
+ ON orders.OrderID = orderdetails.OrderID
+ JOIN items 
+ON items.ItemID=orderdetails.ItemID
+
+	
+
+CREATE VIEW sales AS SELECT SUM(orderdetails.Quantity*items.ProductCost) AS TotalCost, orders.OrderID 
+FROM orderdetails, items,orders 
+WHERE orders.OrderID=orderdetails.OrderID 
+AND orderdetails.ItemID=items.ItemID
+ GROUP BY orders.OrderID 
+
+
+
+CREATE view isad251_salrubaye.vfood AS
+ select items.ItemID,items.ProductName,desicription ,items.ProductCost 
+FROM items 
+WHERE Type='food' 
+
+
+CREATE view isad251_salrubaye.vDrink AS
+ select items.ItemID,items.ProductName,desicription ,items.ProductCost
+ FROM items 
+WHERE Type='Drink'
+
+
+CREATE view vadmin AS
+select UserID,UserFirstName,UserLastName,UserUserName,UserEmail,UserPassword
+from users
+where SUBSTRING(UserEmail, -10) = "@admin.com";
+
+
+CREATE view vcustomer AS
+select UserID,UserFirstName,UserLastName,UserUserName,UserEmail,UserPassword
+from users
+where SUBSTRING(UserEmail, -10) != "@admin.com";
+
+
+
+
+ 	  
  
  
  
