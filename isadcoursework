@@ -47,25 +47,25 @@ primary key (ItemID));
   
   
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(19,5.50,'Bread basket','food','Assortment of fresh baked fruit breads and muffins 5.50');
+  values(19,5.50,'Bread basket','food','Assortment of fresh baked fruit breads and muffins 5.50','BreadBasket.jpg');
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(20,7.00,'Hony almond Granola with fruits','food','Natural cereal of honey toasted oats, raisins, almonds and dates 7.00');
+  values(20,7.00,'Hony almond Granola with fruits','food','Natural cereal of honey toasted oats, raisins, almonds and dates 7.00','HoneyAlmondGranolawithFruits.jpg');
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(22,7.50,'Belgian waffle','food','Vanilla flavored batter with malted flour 7.50');
+  values(22,7.50,'Belgian waffle','food','Vanilla flavored batter with malted flour 7.50','belgian-waffles1.jpg');
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(23,7.50,'scrambled egg','food','Scrambled eggs, 'roasted red pepper and garlic, with green onions 7.50');
+  values(23,7.50,'scrambled egg','food','Scrambled eggs, 'roasted red pepper and garlic, with green onions 7.50','Scrambled_eggs.jpg');
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(24,8.50,'Blue bery pancake','food','With syrup, butter and lots of berries 8.50');
+  values(24,8.50,'Blue bery pancake','food','With syrup, butter and lots of berries 8.50','BlueberryPancakes.jpg');
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(25,2.50,'Cofee',Drink','Regular coffee 2.50');
+  values(25,2.50,'Cofee',Drink','Regular coffee 2.50','cofe.jpg');
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(26,4.50,'Chocolate','Drink','Chocolate espresso with milk 4.50');
+  values(26,4.50,'Chocolate','Drink','Chocolate espresso with milk 4.50','chocolato.jpg');
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(27,5.00,'Carretto','Drink','Whiskey and coffee 5.00');
+  values(27,5.00,'Carretto','Drink','Whiskey and coffee 5.00','Corretto.jpg');
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(28,3.00,'iced tea','Drink','Hot tea, except not hot 3.00');
+  values(28,3.00,'iced tea','Drink','Hot tea, except not hot 3.00','Iced tea.jpg');
   insert into items(ItemID,ProductCost,ProductName,Type,desicription)
-  values(29,2.50,'Soda','Drink','Coke, Sprite, Fanta, etc. 2.50');
+  values(29,2.50,'Soda','Drink','Coke, Sprite, Fanta, etc. 2.50','Soda.jpg');
   
   
   
