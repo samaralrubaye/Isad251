@@ -174,4 +174,17 @@ span.psw {
         table th{
             background-color: #efefef;
         }
+		.col{
+			padding: 40px;
+			font-family: cursive;
+			margin: auto;
+			margin:left: auto;
+
+		}
+		.img{
+			border: 2px solid wheat;
+			height: 200 px;
+			width: 200px;
+		}
+		<div class="w3-sand w3-grayscale w3-large">
 </style>

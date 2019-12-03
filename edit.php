@@ -1,28 +1,35 @@
 <?php
 // including the database connection file
 include_once("config.php");
+require_once("spr_updateCustomer-config.php");
  
 if(isset($_POST['update']))
-{    
-    $UserID= (isset($_POST['UserID']));
-    $UserFirstName=(isset($_POST['UserFirstName']));
-    $UserLastName =(isset($_POST['UserLastName']));
-    $UserEmail=(isset($_POST['UserEmail']));    
-    
+{   $fname = (isset($_POST['UserFirstName']));
+    $Lname = (isset($_POST['UserLastName']));
+	$uname = (isset($_POST['UserUserName']));
+    $email = (isset($_POST['UserEmail']));
+     $upword = (isset($_POST['UserPassWord']));   
+		
     // checking empty fields
-    if(empty($UserFirstName) || empty($UserLastName) || empty($email)) {    
-            
-        if(empty($UserFirstName)) {
-            echo "<font color='red'>UserFirstName field is empty.</font><br/>";
+    if(empty($fname) || empty($Lname) ||empty($uname) ||empty($email)||empty($upword)) {
+                
+        if(empty($fname)) {
+            echo "<font color='red'>Name field is empty.</font><br/>";
         }
         
-        if(empty($UserLastName)) {
-            echo "<font color='red'>UserLastName field is empty.</font><br/>";
+        if(empty($Lname)){
+            echo "<font color='red'>Lnamefield is empty.</font><br/>";
+        }
+		 if(empty($uname)) {
+            echo "<font color='red'>Email field is empty.</font><br/>";
         }
         
-        if(empty($UserEmail)) {
-            echo "<font color='red'>UserEmail field is empty.</font><br/>";
-        }        
+        if(empty($email)) {
+            echo "<font color='red'>Email field is empty.</font><br/>";
+        }
+		 if(empty($upword)) {
+            echo "<font color='red'>Email field is empty.</font><br/>";
+        }
          } else 
 		 {    
         //updating the table

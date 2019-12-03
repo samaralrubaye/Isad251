@@ -7,9 +7,10 @@
 <?php
 //including the database connection file
 include_once("admin_process.php");
+include_once("config.php");
  
 //fetching data in descending order (lastest entry first)
-$result = $dbConn->query("SELECT * FROM users ORDER BY id DESC");
+//$result = $dbConn->query("SELECT * FROM users ORDER BY id DESC");
 ?>
 <a href="add.html">Add New Data</a><br/><br/>
  
@@ -22,13 +23,13 @@ $result = $dbConn->query("SELECT * FROM users ORDER BY id DESC");
         <td>Update</td>
     </tr>
     <?php     
-    while($row = $result->fetch(PDO::FETCH_ASSOC)) {         
+   // while($row = $result->fetch(PDO::FETCH_ASSOC)) {         
         echo "<tr>";
-        echo "<td>".$row['customer first name']."</td>";
-        echo "<td>".$row['customer last name']."</td>";
-        echo "<td>".$row[' customer email']."</td>";    
-        echo "<td><a href=\"edit.php?id=$row[id]\">Edit</a> | <a href=\"delete.php?id=$row[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
-    }
+        echo "<td>".$row['UserFirstName']."</td>";
+        echo "<td>".$row['UserLastName']."</td>";
+        echo "<td>".$row[' UserEmail']."</td>";    
+        echo "<td><a href=\"edit.php?id=$row[UserID]\">Edit</a> | <a href=\"delete.php?id=$row[UserID]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
+   // }
     ?>
     </table>
 </body>

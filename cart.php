@@ -1,70 +1,81 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shopping Cart</title>
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <style>
-    
-        }
-    </style>
-</head>
 <?php
-include_once('cafe.css')
-?>
-<?php
-include_once('config.php')
-?>
-<body>
-<?php 
+include_once('cafe.css');
+session_start();
+require_once('config.php');
+include_once('header.php');
 
 
-$msg ='PLEASE SELECT ITEM';
+try
+{
+	$pdo=getconect();
+	#<!--excute the stored procedure-->
+	
+	#--<!--call stored procedure-->
+	
+	
 
-if(isset($_POST["add_to_cart"])):  
-    if(isset($_SESSION["shopping_cart"])):  
-         $item_array_id = array_column($_SESSION["shopping_cart"], "ItemID");  
-         if(!in_array($_GET["ItemID"], $item_array_id)):             
-              $count = count($_SESSION["shopping_cart"]);  
-              $item_array = array(  
-                   'ItemID'=>$_GET["ItemID"],  
-                   'ProductName'=>$_POST["hidden_name"],  
-                   'ProductPrice'=>$_POST["hidden_price"],  
-                   'Quantity'=>$_POST["Quantity"]
-              );  
-              $_SESSION["shopping_cart"][$count] = $item_array;
-              $msg = 'PRODUCT ADDED';    
-         else:  
-              $msg = 'PRODUCT ALREADY EXISTS';
-
-         endif;  
-    else:  
-         $item_array = array(  
-              'ItemID'=>$_GET["id"],  
-              'ProductName'=>$_POST["hidden_name"],  
-              'ProductPrice'=>$_POST["hidden_price"],  
-              'Quantity'=>$_POST["Quantity"]  
-         );  
-         $_SESSION["shopping_cart"][0] = $item_array;  
-    endif;
-endif;  
-
-if(isset($_GET["action"])): 
-    if($_GET["action"] == "delete"):          
-         foreach($_SESSION["shopping_cart"] as $keys => $values):              
-              if($values["ItemID"] == $_GET["ItemID"]):                  
-                   unset($_SESSION["shopping_cart"][$keys]);  
-                   $msg = 'PRODUCT REMOVED';  
-              endif; 
-         endforeach;  
-    endif;
-endif; 
-   ?>
-</BODY>
-</HTML>
+$page_title='Card' ;
+#include_once('header.php');
+if ($_SERVER['REQUEST_METHOD']== 'POST')
+{ 
+	foreach($_post['qty']as $ItemID=>$Item_qty)
+	{
+		$ItemID=(INT)$ItemID;
+		$qty=(int)Item_qty;
+		if (qty==0)
+		{unset($_SESSION['cart'][$ItemID]);}
+	elseif($qty>0)
+	{$_session['cart'][$ItemID]['ProductCost']=$sqy;}
+	}
+} 
+	
+	if(!empty($_SESSION['cart']))
+	{
+		
+	$quer="select*from shop where ItemID in (";
+	foreach($_SESSION['cart']  as $ItemID=>$value)
+	{$quer.=$ItemID.',';}
+	#$quer=substr($quer,0,-1).')ORDER BY ItemID ASC';
+	
+	$sth = $pdo->prepare('call spsales (?,?,?)');
+	$quantity = 4;
+	$ProductCost = 2.99;
+	$orderID = 5;
+     $sth->bindValue(1, $quantity, PDO::PARAM_INT);
+      $sth->bindValue(2, $ProductCost, PDO::PARAM_STR);
+         $sth->bindValue(3, $orderID, PDO::PARAM_INT);
+       $sth->execute();
+		 
+		ECHO'<form action="cart.php" methode ="post"><table>
+        <tr><th colspan="5">Items in your  cart</th	></tr><tr>';
+		 while($row=$sth->fetch())
+		 {
+			 #calculate the sub-total and grand total
+			 
+			 
+			 require_once('sales.php');
+			
+			 # disply row-->
+			 
+			 echo"<tr><td>{$row['ProductName']}</td>
+			 <td>input type=\"text\" size=\"3\"
+			 
+			 name=\"qty[{$row['ItemID']}]\"
+			 value=\"{$_SESSION['cart'][$row['ItemID']]['stock']}\"></td>
+			 
+			 <td>@{$row['ProductCost']}=</td>
+			 <td>".number_format($subtotal,2)."</td></tr>";
+		 }
+		 echo'<tr><td colspan="5">
+		 total='.number_format($total,2).'</td></tr>
+		 </table>
+		 <input type="submit" value="update my cart">
+		</ format>';
+	}
+	 }
+		catch (PDOException $err)
+{
+	echo 'Error:'.$err->getMessage();
+}	 
+	
+		?>

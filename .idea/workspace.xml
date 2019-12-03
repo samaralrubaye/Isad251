@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="" />
+    <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BUYITEM.PHP" beforeDir="false" afterPath="$PROJECT_DIR$/BUYITEM.PHP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BreadBasket.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/BreadBasket.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HoneyAlmond GranolawithFruits.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/belgian-waffles1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/belgian-waffles1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafe.css" beforeDir="false" afterPath="$PROJECT_DIR$/cafe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/checkout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +27,14 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1SHJ12uXyVTtlYcDRaqnyjk9ORV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/menu.php" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -64,10 +84,30 @@
       <workItem from="1571777482906" duration="594000" />
       <workItem from="1572259311669" duration="1922000" />
       <workItem from="1572264900344" duration="8000" />
+      <workItem from="1572860169074" duration="1966000" />
+      <workItem from="1572880527852" duration="679000" />
+      <workItem from="1573945046088" duration="621000" />
+      <workItem from="1573945786842" duration="7000" />
+      <workItem from="1574114836818" duration="47000" />
+      <workItem from="1574116993140" duration="135000" />
+      <workItem from="1575279594229" duration="607000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

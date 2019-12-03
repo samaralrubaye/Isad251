@@ -17,10 +17,10 @@
       <a href="menu.php" class="w3-button w3-block w3-black">MENU</a>
     </div>
     <div class="w3-col s3">
-      <a href="index\where" class="w3-button w3-block w3-black">WHERE</a>
+      <a href="add.html" class="w3-button w3-block w3-black">items</a>
     </div>
 	<div class="w3-col s3">
-       <a href="#basket" class="w3-button w3-block w3-black">basket</a>
+       <a href="cart.php" class="w3-button w3-block w3-black">basket</a>
     </div>
 	<div class="w3-col s3">
       <a href="login.php" class="w3-button w3-block w3-black">Login</a>
@@ -29,7 +29,7 @@
       <a href="register.php" class="w3-button w3-block w3-black">Register</a>
     </div>
 	<div class="w3-col s3">
-      <a href="admin.php" class="w3-button w3-block w3-black">Admin</a>
+      <a href="Addresult.php" class="w3-button w3-block w3-black">Admin</a>
     </div>
 	
   </div>
