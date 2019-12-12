@@ -2,19 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BUYITEM.PHP" beforeDir="false" afterPath="$PROJECT_DIR$/BUYITEM.PHP" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BreadBasket.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/BreadBasket.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HoneyAlmond GranolawithFruits.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/belgian-waffles1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/belgian-waffles1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafe.css" beforeDir="false" afterPath="$PROJECT_DIR$/cafe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/checkout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BUYITEM.PHP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlueberryPancakes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BreadBasket.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Corretto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreatProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HoneyAlmondGranolawithFruits.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iced tea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrambled_eggs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Soda.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sp_insertCustomer-config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addedtoshoping.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addresult.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_process.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/belgian-waffles1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafe.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cake.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolato.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cofe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deleteuser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/headerimage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img_avatar2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libpassword" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpinfo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-additem-config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-conection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-deleteItem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-insertitem-config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-updateitem-config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spr_updateCustomer-config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thelogo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thetea.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +79,15 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\coursework\src\model" />
+      <recent name="C:\xampp\htdocs\coursework\src\view" />
+      <recent name="C:\xampp\htdocs\coursework\src\control" />
+      <recent name="C:\xampp\htdocs\coursework\public" />
+      <recent name="C:\xampp\htdocs\coursework" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -57,7 +101,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/coursework/index.php" useBuiltInWebServerPort="true">
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/coursework/public/index.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -91,7 +135,20 @@
       <workItem from="1574114836818" duration="47000" />
       <workItem from="1574116993140" duration="135000" />
       <workItem from="1575279594229" duration="607000" />
+      <workItem from="1575548200219" duration="730000" />
+      <workItem from="1575990966153" duration="372000" />
+      <workItem from="1575995878226" duration="6435000" />
+      <workItem from="1576091496995" duration="6820000" />
+      <workItem from="1576147517116" duration="12118000" />
     </task>
+    <task id="LOCAL-00001" summary="divid the code to directeries">
+      <created>1576080154234</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576080154234</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,5 +166,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="divid the code to directeries" />
+    <option name="LAST_COMMIT_MESSAGE" value="divid the code to directeries" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/coursework$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1576090149698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
