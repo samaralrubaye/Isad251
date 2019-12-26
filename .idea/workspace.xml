@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/request.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/DbContext.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/requestCustomer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/requestItems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/AddCustomer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/addCustomerFunctin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/AddItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/addItemsFunctionality.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/deleteCustomer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/editCustomers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/goodbye.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DbContext.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DbContext.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/requestItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/requestItems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/addCustomerFunctin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/addCustomerFunctin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +106,7 @@
       <workItem from="1576091496995" duration="6820000" />
       <workItem from="1576147517116" duration="14108000" />
       <workItem from="1576490086420" duration="13139000" />
-      <workItem from="1577033044356" duration="34998000" />
+      <workItem from="1577033044356" duration="87043000" />
     </task>
     <task id="LOCAL-00001" summary="divid the code to directeries">
       <created>1576080154234</created>
@@ -121,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576162052603</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="divid the code to directeries and get it working">
+      <created>1577265333265</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577265333266</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +152,17 @@
     <MESSAGE value="divid the code to directeries" />
     <MESSAGE value="divid the code to directeries and get it working" />
     <option name="LAST_COMMIT_MESSAGE" value="divid the code to directeries and get it working" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/view/cart.php</url>
+          <line>33</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coursework$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1576090149698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

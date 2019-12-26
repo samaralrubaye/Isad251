@@ -1,4 +1,4 @@
-<html lang="en">
+
 <head>
     <title>Add Data</title>
 </head>
@@ -26,17 +26,15 @@ if(isset( $_post['submit'])) {
 }
 
 
-if(isset($_POST['Submit']))
-	 
-{    
-    $fname = (isset($_POST['UserFirstName']));
-    $Lname = (isset($_POST['UserLastName']));
-	
-    $email = (isset($_POST['UserEmail']));
-       
-		
-    // checking empty fields
-    if(empty($fname) || empty($Lname) ||empty($email)) {
+if(isset($_POST['Submit'])) {
+    $fname=(isset($_POST['UserFirstName']));
+    $Lname=(isset($_POST['UserLastName']));
+
+    $email=(isset($_POST['UserEmail']));
+
+
+// checking empty fields
+    if (empty($fname) || empty($Lname) || empty($email)) {
 
         if (empty($fname)) {
             echo "<span style=\"color: red; \">Name field is empty.</span><br/>";
@@ -49,22 +47,23 @@ if(isset($_POST['Submit']))
         if (empty($email)) {
             echo "<span style=\"color: red; \">Email field is empty.</span><br/>";
         }
-
-?>
-        //link to the previous page
-        echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
-
-
-
+    }
 }
 
-          //display success message
-         echo "<span \ green; style=\"color:">Data added successfully.";
-         echo "<br/><a href='test.php'>View Result</a>";
-	 
+?>
+//link to the previous page
+echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
+
+
+
+
+//display success message
+echo "<span \ green; style=\"color:">Data added successfully.";echo "<br/><a href='AdminForCustomer.php'>View Result</a>";
+
 
 
 
 
 </body>
+
 </html>
