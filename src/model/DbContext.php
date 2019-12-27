@@ -30,13 +30,16 @@ class DbContext
         }
     }
 
-    public function Sp_insertCustomer($request)
+    public function Sp_insertCustomer($requestItem)
     {
-        $sql="CALL Sp_insertCustomer  (:Name, :Lname, :Uemail)";
+        $sql="CALL Sp_insertCustomer  (:ItemID, :ProductCost, :ProductName,:Type,:desicription, :image)";
         $statement=$this->connection->prepare($sql);
-        $statement->bindParam(':Name', $request->Name(), PDO::PARAM_STR);
-        $statement->bindParam(':Lname', $request->Room(), PDO::PARAM_STR);
-        $statement->bindParam(':Uemail', $request->Row(), PDO::PARAM_STR);
+        $statement->bindParam(':ItemID', $requestItem->ItemID(), PDO::PARAM_STR);
+        $statement->bindParam(':ProductCost', $requestItem->ProductCost(), PDO::PARAM_STR);
+        $statement->bindParam(':ProductName', $requestItem->ProductName(), PDO::PARAM_STR);
+        $statement->bindParam(':Type', $requestItem->Type(), PDO::PARAM_STR);
+        $statement->bindParam(':desicription', $requestItem->desicription(), PDO::PARAM_STR);
+        $statement->bindParam(':image', $requestItem->image(), PDO::PARAM_STR);
 
         $return=$statement->execute();
         return $return;
@@ -45,12 +48,12 @@ class DbContext
 
     public function spr_updateCustomer($request)
     {
-        $sql="CALL spr_updateCustomer  (:Name, :Lname, :Uemail)";
+        $sql="CALL spr_updateCustomer  (:UserID, :UserFirstName, :UserLastName,:UserEmail)";
         $statement=$this->connection->prepare($sql);
-        $statement->bindParam(':Name', $request->Name(), PDO::PARAM_STR);
-        $statement->bindParam(':Lname', $request->Room(), PDO::PARAM_STR);
-        $statement->bindParam(':Uemail', $request->Row(), PDO::PARAM_STR);
-
+        $statement->bindParam(':UserID', $request->UserID(), PDO::PARAM_INT);
+        $statement->bindParam(':UserFirstName', $request->UserFirstName(), PDO::PARAM_STR);
+        $statement->bindParam(':UserLastName', $request->UserLastName(), PDO::PARAM_STR);
+        $statement->bindParam(':UserEmail', $request->UserEmail(), PDO::PARAM_STR);
         $return=$statement->execute();
         return $return;
     }

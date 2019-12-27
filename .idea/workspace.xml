@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="start working in admin functionality disply the customers and the items to get it ready to edit delete and add">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/model/DbContext.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DbContext.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,7 +112,7 @@
       <workItem from="1576091496995" duration="6820000" />
       <workItem from="1576147517116" duration="14108000" />
       <workItem from="1576490086420" duration="13139000" />
-      <workItem from="1577033044356" duration="114755000" />
+      <workItem from="1577033044356" duration="116160000" />
     </task>
     <task id="LOCAL-00001" summary="divid the code to directeries">
       <created>1576080154234</created>
@@ -150,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577453688720</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="start working in admin functionality disply the customers and the items to get it ready to edit delete and add">
+      <created>1577485245503</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577485245504</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
