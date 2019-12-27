@@ -71,6 +71,18 @@ class DbContext
         $return=$requestItems->execute();
         return $return;
     }
+    public function getCustomer ($requestCustomers)
+    {
+        $sql="call getCustomers(:UserID,:UserFirstName,:UserLastName,:UserEmail)";
+        $Statement=$this->connection->prepare($sql);
+        $Statement->bindParam(':UserID', $requestCustomers->UseID(), PDO::PARAM_INT);
+        $Statement->bindParam('UserFirstName', $requestCustomers->UserFirstName(), PDO::PARAM_STR);
+        $Statement->bindParam('UserLastName', $requestCustomers->UserLastName(), PDO::PARAM_STR);
+        $Statement->bindParam('UserEmail', $requestCustomers->UserEmail(), PDO::PARAM_STR);
+
+        $return=$requestCustomers->execute();
+        return $return;
+    }
 
     public function allProducts()
     {
@@ -78,6 +90,14 @@ class DbContext
         $query=$this->connection->prepare("call getItem()");
         $query->execute();
 
+        return $query->fetchAll();
+    }
+
+
+    public function allCusromers()
+    {
+        $query=$this->connection->prepare("call getCustomers()");
+        $query->execute();
         return $query->fetchAll();
     }
 
@@ -89,6 +109,13 @@ class DbContext
         return $query->fetch();
     }
 
+    public function getCustomers($UserID)
+    {
+        $query = $this->connection->prepare("SELECT * FROM users WHERE UserID = $UserID");
+        $query->execute();
+
+        return $query->fetch();
+    }
     public function addOrder($userId, $tableNo){
 
         $orderTime = date('Y-m-d H:i:s');
