@@ -3,47 +3,58 @@
 
 class requestItems
 {
-private  $ItemID;
-private $ProductCost;
-private  $ProductName;
-private  $Type;
-Private  $description;
-private  $image;
+    private $ItemID;
+    private $ProductCost;
+    private $ProductName;
+    private $Type;
+    Private $description;
+    private $image;
 
-    public function __construct( $ItemID,$ProductCost,$ProductName, $Type, $description,$image){
-       $this->ItemID=$ItemID;
-       $this->ProductCost=$ProductCost;
-       $this->ProductName=$ProductName;
-       $this->Type=$Type;
-       $this->description=$description;
-       $this->image=$image;
+    public function __construct($ItemID, $ProductCost, $ProductName, $Type, $description, $image)
+    {
+        $this->ItemID=$ItemID;
+        $this->ProductCost=$ProductCost;
+        $this->ProductName=$ProductName;
+        $this->Type=$Type;
+        $this->description=$description;
+        $this->image=$image;
 
-        }
+    }
 
     /**
      * @return int
      */
-    public function ItemID(){
+    public function ItemID()
+    {
         return $this->ItemID;
     }
-    public function ProductCost(){
+
+    public function ProductCost()
+    {
         return $this->ProductCost;
 
     }
-    public function ProductName(){
+
+    public function ProductName()
+    {
         return $this->ProductName;
     }
-    public function  Type(){
+
+    public function Type()
+    {
         return $this->Type;
     }
-    public function description (){
+
+    public function description()
+    {
         return $this->description;
 
     }
-    public function image(){
+
+    public function image()
+    {
         return $this->image;
     }
-
 
 
 }

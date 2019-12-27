@@ -11,17 +11,19 @@ class DbContext
     private $dataSourceName;
     private $connection;
 
-    public function __construct(PDO $connection=null)
+    public function __construct(PDO $connection = null)
     {
-        $this->connection=$connection;
+        $this->connection = $connection;
         try {
-            if ($this->connection === null) {
-                $this->dataSourceName='mysqli:dbname=' . $this->dbDatabase . ';host=' . $this->db_server;
-                $this->connection=new PDO($this->dataSourceName, $this->dbUser, $this->dbPassword);
-                $this->connection->setAttribute(
-                    PDO::ATTR_ERRMODE,
-                    PDO::ERRMODE_EXCEPTION
-                );
+            if ($this->connection == null) {
+                $this->dataSourceName= "mysql:host=$this->db_server;dbname=$this->dbDatabase";
+                $options=[
+                    PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,
+                    PDO::ATTR_EMULATE_PREPARES=>false
+                ];
+                $this->connection=new PDO($this->dataSourceName, $this->dbUser, $this->dbPassword, $options);
+
             }
         } catch (PDOException $err) {
             echo 'Connection failed: ', $err->getMessage();
@@ -41,17 +43,18 @@ class DbContext
     }
 
 
-    public function spr_updateCustomer ($request)
+    public function spr_updateCustomer($request)
     {
-        $sql = "CALL spr_updateCustomer  (:Name, :Lname, :Uemail)";
-        $statement = $this->connection->prepare($sql);
+        $sql="CALL spr_updateCustomer  (:Name, :Lname, :Uemail)";
+        $statement=$this->connection->prepare($sql);
         $statement->bindParam(':Name', $request->Name(), PDO::PARAM_STR);
         $statement->bindParam(':Lname', $request->Room(), PDO::PARAM_STR);
         $statement->bindParam(':Uemail', $request->Row(), PDO::PARAM_STR);
 
-        $return = $statement->execute();
+        $return=$statement->execute();
         return $return;
     }
+
     /**
      * @return PDO
      */
@@ -59,27 +62,69 @@ class DbContext
     {
         $sql="call getItem(:ItemID,:ProductCost,:ProductName,:Type,:Destination,:image,:Stock)";
         $Statement=$this->connection->prepare($sql);
-        $Statement->bindParam(':ItemID',$requestItems->ItemID(),PDO::PARAM_INT);
-        $Statement->bindParam('ProductCost',$requestItems->ProductCost(),PDO::PARAM_INT);
-        $Statement->bindParam('ProductName',$requestItems->ProductName(),PDO::PARAM_STR);
-        $Statement->bindParam('Type',$requestItems-> Type(),PDO::PARAM_STR);
-        $Statement->bindParam('desicription',$requestItems->decicription(),PDO::PARAM_STR);
-        $Statement->bindParam('image',$requestItems->image(),PDO::STR);
-        $return = $requestItems->execute();
+        $Statement->bindParam(':ItemID', $requestItems->ItemID(), PDO::PARAM_INT);
+        $Statement->bindParam('ProductCost', $requestItems->ProductCost(), PDO::PARAM_INT);
+        $Statement->bindParam('ProductName', $requestItems->ProductName(), PDO::PARAM_STR);
+        $Statement->bindParam('Type', $requestItems->Type(), PDO::PARAM_STR);
+        $Statement->bindParam('desicription', $requestItems->decicription(), PDO::PARAM_STR);
+        $Statement->bindParam('image', $requestItems->image(), PDO::STR);
+        $return=$requestItems->execute();
         return $return;
     }
+
+    public function allProducts()
+    {
+
+        $query=$this->connection->prepare("call getItem()");
+        $query->execute();
+
+        return $query->fetchAll();
+    }
+
+    public function getProduct($itemId)
+    {
+        $query = $this->connection->prepare("SELECT * FROM items WHERE ItemID = $itemId");
+        $query->execute();
+
+        return $query->fetch();
+    }
+
+    public function addOrder($userId, $tableNo){
+
+        $orderTime = date('Y-m-d H:i:s');
+
+        $query = "INSERT INTO orders(TableNo, UserID, OrderTimeDate) VALUES(:TableNo, :UserId, :OrderTimeDate)";
+        $stmt = $this->connection->prepare($query);
+        $stmt -> bindParam(':TableNo', $tableNo);
+        $stmt -> bindParam(':UserId', $userId);
+        $stmt -> bindParam(':OrderTimeDate', $orderTime);
+        $resutl = $stmt->execute();
+
+        return $this->connection->lastInsertId();
+    }
+
+    public function addOrderDetails($quantity, $orderId, $itemId){
+        $query = "INSERT INTO orderdetails(Quantity, OrderID, ItemID) VALUES(:Quantity, :OrderID, :ItemID)";
+        $stmt = $this->connection->prepare($query);
+        $stmt -> bindParam(':Quantity', $quantity);
+        $stmt -> bindParam(':OrderID', $orderId);
+        $stmt -> bindParam(':ItemID', $itemId);
+        $resutl = $stmt->execute();
+        return $resutl;
+    }
+
 
     public function spr_updateitem($requestItems)
     {
         $sql="call spr_updateitem(:ItemID,:ProductCost,:ProductName,:Type,:Destination,:image,:Stock)";
         $Statement=$this->connection->prepare($sql);
-        $Statement->bindParam(':ItemID',$requestItems->ItemID(),PDO::PARAM_INT);
-        $Statement->bindParam('ProductCost',$requestItems->ProductCost(),PDO::PARAM_INT);
-        $Statement->bindParam('ProductName',$requestItems->ProductName(),PDO::PARAM_STR);
-        $Statement->bindParam('Type',$requestItems->Type(),PDO::PARAM_STR);
-        $Statement->bindParam('desicription',$requestItems->decicription(),PDO::PARAM_STR);
-        $Statement->bindParam('image',$requestItems->image(),PDO::STR);
-        $return = $requestItems->execute();
+        $Statement->bindParam(':ItemID', $requestItems->ItemID(), PDO::PARAM_INT);
+        $Statement->bindParam('ProductCost', $requestItems->ProductCost(), PDO::PARAM_INT);
+        $Statement->bindParam('ProductName', $requestItems->ProductName(), PDO::PARAM_STR);
+        $Statement->bindParam('Type', $requestItems->Type(), PDO::PARAM_STR);
+        $Statement->bindParam('desicription', $requestItems->decicription(), PDO::PARAM_STR);
+        $Statement->bindParam('image', $requestItems->image(), PDO::STR);
+        $return=$requestItems->execute();
         return $return;
     }
 
@@ -87,13 +132,13 @@ class DbContext
     {
         $sql="call sp_ItemDelete(:ItemID,:ProductCost,:ProductName,:Type,:Destination,:image,:Stock)";
         $Statement=$this->connection->prepare($sql);
-        $Statement->bindParam(':ItemID',$requestItems->ItemID(),PDO::PARAM_INT);
-        $Statement->bindParam('ProductCost',$requestItems->ProductCost(),PDO::PARAM_decimal);
-        $Statement->bindParam('ProductName',$requestItems->ProductName(),PDO::PARAM_STR);
-        $Statement->bindParam('Type',$requestItems->Type(),PDO::PARAM_STR);
-        $Statement->bindParam('desicription',$requestItems->decicription(),PDO::PARAM_STR);
-        $Statement->bindParam('image',$requestItems->image(),PDO::STR);
-        $return = $requestItems->execute();
+        $Statement->bindParam(':ItemID', $requestItems->ItemID(), PDO::PARAM_INT);
+        $Statement->bindParam('ProductCost', $requestItems->ProductCost(), PDO::PARAM_decimal);
+        $Statement->bindParam('ProductName', $requestItems->ProductName(), PDO::PARAM_STR);
+        $Statement->bindParam('Type', $requestItems->Type(), PDO::PARAM_STR);
+        $Statement->bindParam('desicription', $requestItems->decicription(), PDO::PARAM_STR);
+        $Statement->bindParam('image', $requestItems->image(), PDO::STR);
+        $return=$requestItems->execute();
         return $return;
     }
 
@@ -101,16 +146,15 @@ class DbContext
     {
         $sql="call Sp_insertItem(:ItemID,:ProductCost,:ProductName,:Type,:Destination,:image,:Stock)";
         $Statement=$this->connection->prepare($sql);
-        $Statement->bindParam(':ItemID',$requestItems->ItemID(),PDO::PARAM_INT);
-        $Statement->bindParam('ProductCost',$requestItems->ProductCost(),PDO::PARAM_decimal);
-        $Statement->bindParam('ProductName',$requestItems->ProductName(),PDO::PARAM_STR);
-        $Statement->bindParam('Type',$requestItems->Type(),PDO::PARAM_STR);
-        $Statement->bindParam('desicription',$requestItems->decicription(),PDO::PARAM_STR);
-        $Statement->bindParam('image',$requestItems->image(),PDO::STR);
-        $return = $requestItems->execute();
+        $Statement->bindParam(':ItemID', $requestItems->ItemID(), PDO::PARAM_INT);
+        $Statement->bindParam('ProductCost', $requestItems->ProductCost(), PDO::PARAM_decimal);
+        $Statement->bindParam('ProductName', $requestItems->ProductName(), PDO::PARAM_STR);
+        $Statement->bindParam('Type', $requestItems->Type(), PDO::PARAM_STR);
+        $Statement->bindParam('desicription', $requestItems->decicription(), PDO::PARAM_STR);
+        $Statement->bindParam('image', $requestItems->image(), PDO::STR);
+        $return=$requestItems->execute();
         return $return;
     }
-
 
 
 }

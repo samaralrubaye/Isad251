@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/view/AddItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/addItemsFunctionality.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/deleteCustomer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/editCustomers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/goodbye.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DbContext.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DbContext.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/requestItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/requestItems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/addCustomerFunctin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/addCustomerFunctin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/AddCustomer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AddCustomer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +18,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,6 +49,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -106,7 +116,7 @@
       <workItem from="1576091496995" duration="6820000" />
       <workItem from="1576147517116" duration="14108000" />
       <workItem from="1576490086420" duration="13139000" />
-      <workItem from="1577033044356" duration="87043000" />
+      <workItem from="1577033044356" duration="99322000" />
     </task>
     <task id="LOCAL-00001" summary="divid the code to directeries">
       <created>1576080154234</created>
@@ -129,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577265333266</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="writing stored procedure connection,add code to basket correct the add delete,edit,create(customer,items)">
+      <created>1577395569333</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577395569334</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,18 +168,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="divid the code to directeries" />
     <MESSAGE value="divid the code to directeries and get it working" />
-    <option name="LAST_COMMIT_MESSAGE" value="divid the code to directeries and get it working" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/view/cart.php</url>
-          <line>33</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="writing stored procedure connection,add code to basket correct the add delete,edit,create(customer,items)" />
+    <option name="LAST_COMMIT_MESSAGE" value="writing stored procedure connection,add code to basket correct the add delete,edit,create(customer,items)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coursework$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1576090149698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

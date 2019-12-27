@@ -23,7 +23,7 @@
     }
     if(isset( $_post['submit'])) {
 
-        $request = new request( $_POST('UserFirstName') ,$_POST('UserLastName'),$_POST(UserEmail));
+        $request = new request( $_POST('UserFirstName') ,$_POST('UserLastName'),$_POST('UserEmail'));
     $success=$db->Sp_insertCustomer($request);
     }
 ?>
