@@ -143,6 +143,40 @@ class DbContext
         return $resutl;
     }
 
+    public function addItem( $productName, $productCost, $type, $desc, $image){
+        $query = "INSERT INTO items(ProductName, ProductCost, Type,desicription	, image ) VALUES( :ProductName, :ProductCost, :Type, :desicription, :image)";
+        $stmt = $this->connection->prepare($query);
+    //    $stmt -> bindParam(':ItemID', $itemID);
+        $stmt -> bindParam(':ProductName', $productName);
+        $stmt -> bindParam(':ProductCost', $productCost);
+        $stmt -> bindParam(':Type', $type);
+        $stmt -> bindParam(':image', $image);
+        $stmt -> bindParam(':desicription', $desc);
+        $resutl = $stmt->execute();
+        return $resutl;
+    }
+
+    public function editItem($itemID, $productName, $productCost, $type, $desc, $image){
+        $query = "UPDATE items SET ProductName=:ProductName, ProductCost=:ProductCost, Type=:Type,desicription=:desicription, image=:image WHERE ItemID=:ItemID";
+        $stmt = $this->connection->prepare($query);
+        $stmt -> bindParam(':ItemID', $itemID);
+        $stmt -> bindParam(':ProductName', $productName);
+        $stmt -> bindParam(':ProductCost', $productCost);
+        $stmt -> bindParam(':Type', $type);
+        $stmt -> bindParam(':image', $image);
+        $stmt -> bindParam(':desicription', $desc);
+        $resutl = $stmt->execute();
+        return $resutl;
+    }
+
+    public function deleteItem($itemID){
+        $query = "DELETE FROM items WHERE ItemID=:ItemID";
+        $stmt = $this->connection->prepare($query);
+        $stmt -> bindParam(':ItemID', $itemID);
+        $resutl = $stmt->execute();
+        return $resutl;
+    }
+
 
     public function spr_updateitem($requestItems)
     {
@@ -174,13 +208,13 @@ class DbContext
 
     public function Sp_insertItem($requestItems)
     {
-        $sql="call Sp_insertItem(:ItemID,:ProductCost,:ProductName,:Type,:Destination,:image,:Stock)";
+        $sql="call Sp_insertItem(:ItemID,:ProductCost,:ProductName,:Type,:desicription,:image)";
         $Statement=$this->connection->prepare($sql);
-        $Statement->bindParam(':ItemID', $requestItems->ItemID(), PDO::PARAM_INT);
+        $Statement->bindParam('ItemID', $requestItems->ItemID(), PDO::PARAM_INT);
         $Statement->bindParam('ProductCost', $requestItems->ProductCost(), PDO::PARAM_decimal);
         $Statement->bindParam('ProductName', $requestItems->ProductName(), PDO::PARAM_STR);
         $Statement->bindParam('Type', $requestItems->Type(), PDO::PARAM_STR);
-        $Statement->bindParam('desicription', $requestItems->decicription(), PDO::PARAM_STR);
+        $Statement->bindParam('desicription', $requestItems->description(), PDO::PARAM_STR);
         $Statement->bindParam('image', $requestItems->image(), PDO::STR);
         $return=$requestItems->execute();
         return $return;

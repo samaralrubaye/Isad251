@@ -1,8 +1,8 @@
 <?php
 
 // including the database connection file
-include_once("DbContext.php");
-include_once("requestCustomer");
+include_once("../model/DbContext.php");
+include_once("../model/requestCustomer.php");
 if (!isset($db)) {
     $db =new DbContext();
 }

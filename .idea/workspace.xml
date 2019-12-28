@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DbContext.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DbContext.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/AddCustomer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AddCustomer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/AddItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AddItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/addItemsFunctionality.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/addItemsFunctionality.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/deleteCustomer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/deleteCustomer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/editCustomers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/editCustomers.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +118,7 @@
       <workItem from="1576091496995" duration="6820000" />
       <workItem from="1576147517116" duration="14108000" />
       <workItem from="1576490086420" duration="13139000" />
-      <workItem from="1577033044356" duration="116160000" />
+      <workItem from="1577033044356" duration="125612000" />
     </task>
     <task id="LOCAL-00001" summary="divid the code to directeries">
       <created>1576080154234</created>
@@ -156,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577485245504</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="correct insertitem function &#10;correct  insertcustomer function">
+      <created>1577486732065</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577486732065</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +194,8 @@
     <MESSAGE value="writing stored procedure connection,add code to basket correct the add delete,edit,create(customer,items)" />
     <MESSAGE value="get the menu and the basket working properly" />
     <MESSAGE value="start working in admin functionality disply the customers and the items to get it ready to edit delete and add" />
-    <option name="LAST_COMMIT_MESSAGE" value="start working in admin functionality disply the customers and the items to get it ready to edit delete and add" />
+    <MESSAGE value="correct insertitem function &#10;correct  insertcustomer function" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct insertitem function &#10;correct  insertcustomer function" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coursework$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1576090149698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

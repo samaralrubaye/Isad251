@@ -1,6 +1,3 @@
-
-
-
 <html>
 <head>
     <title>Add Data</title>
