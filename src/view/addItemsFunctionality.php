@@ -63,7 +63,7 @@ echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
 
 
 //display success message
-echo "<span \ green; style=\"color:">Data added successfully.";echo "<br/><a href='AdminForCustomer.php'>View Result</a>";
+echo "<span \ green; style=\"color:">Data added successfully.";echo "<br/><a href='AdminForItem.php'>View Result</a>";
 
 
 </body>

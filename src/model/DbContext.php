@@ -155,6 +155,15 @@ class DbContext
         $resutl = $stmt->execute();
         return $resutl;
     }
+    public function addCustomer( $UserFirstName, $UserLastName, $UserEmail){
+        $query = "INSERT INTO items(UserFirstName,UserLastName,UserEmail ) VALUES( :UserFirstName, :UserLastName, :UserEmail)";
+        $stmt = $this->connection->prepare($query);
+        $stmt -> bindParam(':UserFirstName', $productName);
+        $stmt -> bindParam(':UserLastName', $productCost);
+        $stmt -> bindParam(':UserEmail', $type);
+        $resutl = $stmt->execute();
+        return $resutl;
+    }
 
     public function editItem($itemID, $productName, $productCost, $type, $desc, $image){
         $query = "UPDATE items SET ProductName=:ProductName, ProductCost=:ProductCost, Type=:Type,desicription=:desicription, image=:image WHERE ItemID=:ItemID";
@@ -169,10 +178,28 @@ class DbContext
         return $resutl;
     }
 
-    public function deleteItem($itemID){
-        $query = "DELETE FROM items WHERE ItemID=:ItemID";
+    public function editCustomer($UserID, $UserFirstName, $UserLastName, $UserEmail){
+        $query = "UPDATE users SET UserFirstName=:UserFirstName, UserLastName=:UserLastName ,UserEmail=:UserEmail WHERE UserID=:UserID";
         $stmt = $this->connection->prepare($query);
-        $stmt -> bindParam(':ItemID', $itemID);
+        $stmt -> bindParam(':UserID', $UserID);
+        $stmt -> bindParam(':UserFirstName', $UserFirstName);
+        $stmt -> bindParam(':UserLastName', $UserLastName);
+        $stmt -> bindParam(':UserEmail', $UserEmail);
+        $resutls = $stmt->execute();
+        return $resutls;
+    }
+
+    public function deleteItem($itemID){
+    $query = "DELETE FROM items WHERE ItemID=:ItemID";
+    $stmt = $this->connection->prepare($query);
+    $stmt -> bindParam(':ItemID', $itemID);
+    $resutl = $stmt->execute();
+    return $resutl;
+}
+    public function deleteCustomer($UserID){
+        $query = "DELETE FROM users WHERE UserID=:UserID";
+        $stmt = $this->connection->prepare($query);
+        $stmt -> bindParam(':UserID', $UserID);
         $resutl = $stmt->execute();
         return $resutl;
     }
