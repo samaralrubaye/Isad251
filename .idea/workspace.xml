@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="do correction">
+    <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Api/items.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DbContext.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DbContext.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/addItemsFunctionality.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/addItemsFunctionality.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/deleteCustomer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/deleteCustomer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/editCustomers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/editCustomers.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +114,7 @@
       <workItem from="1576147517116" duration="14108000" />
       <workItem from="1576490086420" duration="13139000" />
       <workItem from="1577033044356" duration="139063000" />
-      <workItem from="1577790089383" duration="1588000" />
+      <workItem from="1577790089383" duration="6944000" />
     </task>
     <task id="LOCAL-00001" summary="divid the code to directeries">
       <created>1576080154234</created>
@@ -175,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577528523517</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="do debuging">
+      <created>1577793100927</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1577793100927</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +207,8 @@
     <MESSAGE value="correct insertitem function &#10;correct  insertcustomer function" />
     <MESSAGE value="add editit and delete items functional now" />
     <MESSAGE value="do correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="do correction" />
+    <MESSAGE value="do debuging" />
+    <option name="LAST_COMMIT_MESSAGE" value="do debuging" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coursework$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1576090149698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
