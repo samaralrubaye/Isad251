@@ -16,9 +16,7 @@
     <div class="w3-col s3">
       <a href="../public/index.php" class="w3-button w3-block w3-black">HOME</a>
     </div>
-    <div class="w3-col s3">
-      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
-    </div>
+
     <div class="w3-col s3">
       <a href="../src/view/menu.php" class="w3-button w3-block w3-black">MENU</a>
     </div>
@@ -29,7 +27,7 @@
           <a href="../src/view/AdminForItem.php" class="w3-button w3-block w3-black">Admin for Items</a>
       </div>
 	<div class="w3-col s3">
-       <a href="../view/cart.php" class="w3-button w3-block w3-black">basket</a>
+       <a href="../src/view/cart.php" class="w3-button w3-block w3-black">basket</a>
     </div>
 
 

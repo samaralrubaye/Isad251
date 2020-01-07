@@ -115,7 +115,7 @@
       <workItem from="1576490086420" duration="13139000" />
       <workItem from="1577033044356" duration="139063000" />
       <workItem from="1577790089383" duration="8106000" />
-      <workItem from="1578425568722" duration="840000" />
+      <workItem from="1578425568722" duration="2905000" />
     </task>
     <task id="LOCAL-00001" summary="divid the code to directeries">
       <created>1576080154234</created>
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578416759988</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="debug the heder">
+      <created>1578426657426</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1578426657427</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +231,8 @@
     <MESSAGE value="do correction" />
     <MESSAGE value="do debuging" />
     <MESSAGE value="needed to reupload" />
-    <option name="LAST_COMMIT_MESSAGE" value="needed to reupload" />
+    <MESSAGE value="debug the heder" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug the heder" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coursework$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1576090149698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
