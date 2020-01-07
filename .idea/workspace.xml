@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/cafe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BlueberryPancakes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BreadBasket.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Corretto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/HoneyAlmondGranolawithFruits.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Iced tea.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Scrambled_eggs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Soda.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/belgian-waffles1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cake.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/chocolato.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cofe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/img_avatar2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/thelogo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/thetea.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/headerimage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/AdminForCustomer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/AdminForItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/addedtoshoping.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/basket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/checkout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/deleteItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ediItems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/menu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/~$er eview.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +114,8 @@
       <workItem from="1576147517116" duration="14108000" />
       <workItem from="1576490086420" duration="13139000" />
       <workItem from="1577033044356" duration="139063000" />
-      <workItem from="1577790089383" duration="7270000" />
+      <workItem from="1577790089383" duration="8106000" />
+      <workItem from="1578425568722" duration="840000" />
     </task>
     <task id="LOCAL-00001" summary="divid the code to directeries">
       <created>1576080154234</created>
@@ -214,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578416409153</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="needed to reupload">
+      <created>1578416759988</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1578416759988</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +223,8 @@
     <MESSAGE value="add editit and delete items functional now" />
     <MESSAGE value="do correction" />
     <MESSAGE value="do debuging" />
-    <option name="LAST_COMMIT_MESSAGE" value="do debuging" />
+    <MESSAGE value="needed to reupload" />
+    <option name="LAST_COMMIT_MESSAGE" value="needed to reupload" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coursework$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1576090149698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

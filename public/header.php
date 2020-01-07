@@ -14,28 +14,26 @@
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
-      <a href="/coursework/public/index.php" class="w3-button w3-block w3-black">HOME</a>
+      <a href="../public/index.php" class="w3-button w3-block w3-black">HOME</a>
     </div>
     <div class="w3-col s3">
       <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
     </div>
     <div class="w3-col s3">
-      <a href="/coursework/src/view/menu.php" class="w3-button w3-block w3-black">MENU</a>
+      <a href="../src/view/menu.php" class="w3-button w3-block w3-black">MENU</a>
     </div>
     <div class="w3-col s3">
-      <a href="/coursework/src/view/AdminForCustomer.php" class="w3-button w3-block w3-black">AdminC</a>
+      <a href="../src/view/AdminForCustomer.php" class="w3-button w3-block w3-black">Admin for customer</a>
     </div>
       <div class="w3-col s3">
-          <a href="/coursework/src/view/AdminForItem.php" class="w3-button w3-block w3-black">Admini</a>
+          <a href="../src/view/AdminForItem.php" class="w3-button w3-block w3-black">Admin for Items</a>
       </div>
 	<div class="w3-col s3">
        <a href="../view/cart.php" class="w3-button w3-block w3-black">basket</a>
     </div>
 
 
-	<div class="w3-col s3">
-      <a href="../src/view/Addresult.php" class="w3-button w3-block w3-black">Admin</a>
-    </div>
+
 	
   </div>
 </div>
