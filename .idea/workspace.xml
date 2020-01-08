@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="91efaf4e-be63-43e2-9337-ca96b73e2dc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/items.php" beforeDir="false" afterPath="$PROJECT_DIR$/Api/items.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DbContext.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DbContext.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +116,7 @@
       <workItem from="1576490086420" duration="13139000" />
       <workItem from="1577033044356" duration="139063000" />
       <workItem from="1577790089383" duration="8106000" />
-      <workItem from="1578425568722" duration="2905000" />
+      <workItem from="1578425568722" duration="23222000" />
     </task>
     <task id="LOCAL-00001" summary="divid the code to directeries">
       <created>1576080154234</created>
@@ -201,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578426657427</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="debug the heder">
+      <created>1578428726130</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578428726131</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
